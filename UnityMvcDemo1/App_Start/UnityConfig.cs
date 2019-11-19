@@ -1,6 +1,7 @@
 using System;
 
 using Unity;
+using UnityMvcDemo1.Services;
 
 namespace UnityMvcDemo1
 {
@@ -42,6 +43,8 @@ namespace UnityMvcDemo1
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+            
+            container.RegisterType<IDemoService, DemoService>();
         }
     }
 }

@@ -4,3 +4,19 @@
 }
 
 <h1>@ViewBag.Title</h1>
+
+@if (!String.IsNullOrEmpty(ViewBag.Greetings))
+{
+    <div class="alert alert-success h3">@ViewBag.Greetings</div>
+}
+
+<div class="form-inline">
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label class="mr-2">Greetings:</label>
+            @Html.TextBox("name", null, new { @class="form-control", placeholder="Enter your name here!" })
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    }
+</div>
